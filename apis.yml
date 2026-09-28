@@ -1,23 +1,86 @@
 aid: belong-health
+
 name: Belong Health
-description: 'Belong Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://images.prismic.io/belong-health/e960e9ba-795d-4856-bee4-1275d9837c43_GettyImages-1190822834_%402x.jpg?auto=compress,format&rect=0,162,2958,1553&w=1200&h=630
+
+description: Belong Health provides a full‑stack health plan platform that helps insurers and health systems launch and grow Medicare Advantage
+  and Special Needs Plans. Through coverage and care, they serve complex, high‑need communities, offering services such as MSSP, MA & SNP, and
+  integrated care management. The company partners with health plans to streamline product development, risk sharing, and patient outcomes, aiming
+  to make supportive healthcare available to everyone.
+
 url: https://raw.githubusercontent.com/api-evangelist/belong-health/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
+- Health
+- Insurance
+- Medicare
+- Healthcare
+- Platform
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/belong-health-hosts.yml
+- type: Vendors
+  url: vendors/belong-health-vendors.yml
+- type: DomainSecurity
+  url: security/belong-health-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/belong-health_stock/
+  url: https://belong-health.com/
+- type: Documentation
+  url: https://belong-health.com/what-we-do/
+- type: APIReference
+  url: https://belong-health.com/api
+- type: GettingStarted
+  url: https://belong-health.com/what-we-do/
+- type: Support
+  url: https://belong-health.com/contact-us/
+- type: Blog
+  url: https://belong-health.com/news/
+- type: TermsOfService
+  url: https://belong-health.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://belong-health.com/privacy-policy/
+
+apis:
+- name: Belong Health API
+  description: API reference for Belong Health platform
+  humanURL: https://belong-health.com/what-we-do/
+  baseURL: null
+  aid: belong-health:belong-health-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The API reference page https://belong-health.com/what-we-do/ redirects (301) and serves a JavaScript‑rendered site with no machine‑readable
+    OpenAPI spec.
+  evidence:
+  - url: https://belong-health.com/what-we-do/
+    status: 301
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
